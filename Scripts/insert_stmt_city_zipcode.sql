@@ -1,0 +1,27 @@
+-- San Mateo County: ID 2
+
+INSERT INTO city (NAME, COUNTY_ID)
+VALUES ('Woodside', 2);
+
+-- Woodside City ID 77 
+INSERT INTO zipcode(ZIPCODE, CITY_ID)
+VALUES('94027', 77);
+
+INSERT INTO zipcode(ZIPCODE, CITY_ID)
+VALUES('94028', 77 );
+
+INSERT INTO zipcode(ZIPCODE, CITY_ID)
+VALUES('94061', 77);
+
+INSERT INTO zipcode(ZIPCODE, CITY_ID)
+VALUES('94062', 77);
+
+
+-- Monterey County ID 4
+INSERT INTO city (NAME, COUNTY_ID)
+VALUES ('Royal Oaks', 4);
+
+
+-- Royal Oaks ID 78
+INSERT INTO zipcode(ZIPCODE, CITY_ID)
+VALUES('95076', 78);
