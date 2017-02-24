@@ -1,2 +1,0 @@
-INSERT INTO price_dim_upd(MLS_ID, LIST_PRICE) 
-SELECT MLS_ID, LIST_PRICE FROM v_price_upd;

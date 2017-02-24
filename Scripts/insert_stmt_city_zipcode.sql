@@ -27,8 +27,6 @@ INSERT INTO zipcode(ZIPCODE, CITY_ID)
 VALUES('95076', 78);
 
 
-
-
 -- TYPE LKUP
 INSERT INTO prop_type_lkp(TYPE_ID, TYPE)
 VALUES(1, 'Single Family');
@@ -46,5 +44,4 @@ INSERT INTO prop_type_lkp(TYPE_ID, TYPE)
 VALUES(7, 'Rent');
 INSERT INTO prop_type_lkp(TYPE_ID, TYPE)
 VALUES(8, 'Commercial');
-
 
