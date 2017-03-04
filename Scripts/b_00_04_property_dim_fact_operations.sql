@@ -70,15 +70,10 @@ SET
 WHERE
     stat.PENDING_DATE IS NOT NULL;
     
-    
-select * from prop_addr_hist_stg;
 
-start transaction;
 
-insert into prop_addr_hist_stg select * from prop_addr_hist_stg_bkp;
+select * from mls_status_dim;
 
-commit;
-    
 
-select distinct PROP_ADDR_ID FROM prop_addr_hist_stg
-ORDER BY PROP_ADDR_ID;
+select count(*) from prop_addr_incr
+where REALTOR_URL IS NOT NULL

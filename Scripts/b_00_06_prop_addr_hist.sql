@@ -16,3 +16,23 @@ HAVING ratio > 5;
 
 
 select * from prop_addr_hist_stg;
+
+INSERT INTO prop_addr_hist (PROP_ADDR_ID, EVENT_DATE, EVENT_ID, PRICE, PRICE_SQFT)
+SELECT PROP_ADDR_ID, EVENT_DATE, lkp.EVENT_ID, MAX(PRICE) PRICE, PRICE_SQFT
+from prop_addr_hist_stg stg JOIN
+event_type_lkp lkp ON stg.EVENT = lkp.EVENT
+GROUP BY PROP_ADDR_ID, EVENT_DATE, lkp.EVENT_ID
+ORDER BY PROP_ADDR_ID, EVENT_DATE desc;
+
+select * from prop_addr_hist;
+
+SELECT count(*) FROM prop_addr_fact where IS_UPDATED = 0;
+
+select EVENT_DATE from prop_addr_hist
+WHERE PROP_ADDR_ID = 80
+order by EVENT_DATE desc
+
+select count(*) from prop_addr_hist_stg
+
+
+
