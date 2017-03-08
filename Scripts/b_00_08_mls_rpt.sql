@@ -22,3 +22,16 @@ v_rpt_city_price v;
 select v.* from 
 (select @zipcode:='94086', @prop_type:=1) parm, 
 v_rpt_zipcode_type_price v
+
+
+select * from mls_prop_incr;
+
+
+delete from mls_price_rpt where RPT_DATE = str_to_date('2017-03-08', '%Y-%m-%d');
+
+
+SELECT * FROM prop_addr_hist;
+SELECT * FROM prop_addr_fact;
+
+
+SELECT * FROM mls_price_rpt;
